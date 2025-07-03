@@ -14,7 +14,8 @@ RUN pip install mysqlclient
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/backend
-CMD ["gunicorn", "django_notes_app.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "notesapp.wsgi:application", "--bind", "0.0.0.0:8000"]
+
 
 
 EXPOSE 8000
